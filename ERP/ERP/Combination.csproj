@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52423508-59B8-42BA-98A5-D954223CC471}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Combination</RootNamespace>
+    <AssemblyName>Combination</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release%28Update%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>系統icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>E:\Program Files (x86)\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CSkin">
+      <HintPath>..\PDA\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\PDA\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="LayeredSkin">
+      <HintPath>..\PDA\LayeredSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoxDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoxDemand.Designer.cs">
+      <DependentUpon>BoxDemand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckExternalBoxAndLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckExternalBoxAndLabel.Designer.cs">
+      <DependentUpon>CheckExternalBoxAndLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\FactoryInput_SampleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\FactoryInput_SampleEdit.Designer.cs">
+      <DependentUpon>FactoryInput_SampleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\Order_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\Order_Edit.Designer.cs">
+      <DependentUpon>Order_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\WorkFlow_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\WorkFlow_Add.Designer.cs">
+      <DependentUpon>WorkFlow_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\WorkFlow_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\WorkFlow_Edit.Designer.cs">
+      <DependentUpon>WorkFlow_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\温湿度基础设置_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\温湿度基础设置_Add.Designer.cs">
+      <DependentUpon>温湿度基础设置_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\温湿度基础设置_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\温湿度基础设置_Edit.Designer.cs">
+      <DependentUpon>温湿度基础设置_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FactoryInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FactoryInput.Designer.cs">
+      <DependentUpon>FactoryInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MErrorCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MErrorCheck.Designer.cs">
+      <DependentUpon>MErrorCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PNameDefInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PNameDefInfo.Designer.cs">
+      <DependentUpon>PNameDefInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProduceOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProduceOrder.Designer.cs">
+      <DependentUpon>ProduceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlowBaicSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkFlowBaicSetting.Designer.cs">
+      <DependentUpon>WorkFlowBaicSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="任务单流程表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="任务单流程表.Designer.cs">
+      <DependentUpon>任务单流程表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="刀模报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="刀模报表.Designer.cs">
+      <DependentUpon>刀模报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="发货通知检核表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="发货通知检核表.Designer.cs">
+      <DependentUpon>发货通知检核表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="排程报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="排程报表.Designer.cs">
+      <DependentUpon>排程报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="机台基础信习查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="机台基础信习查询.Designer.cs">
+      <DependentUpon>机台基础信习查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="机台日报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="机台日报表.Designer.cs">
+      <DependentUpon>机台日报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="机台绩效报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="机台绩效报表.Designer.cs">
+      <DependentUpon>机台绩效报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="权限角色管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="权限角色管理.Designer.cs">
+      <DependentUpon>权限角色管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoSizeFormClass.cs" />
+    <Compile Include="ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\车间输入报表-Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\车间输入报表-Add.designer.cs">
+      <DependentUpon>车间输入报表-Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\车间输入报表-编辑.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\车间输入报表-编辑.Designer.cs">
+      <DependentUpon>车间输入报表-编辑.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\权限角色管理-新增.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\权限角色管理-新增.Designer.cs">
+      <DependentUpon>权限角色管理-新增.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\权限角色管理-编辑.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\权限角色管理-编辑.Designer.cs">
+      <DependentUpon>权限角色管理-编辑.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form17.designer.cs">
+      <DependentUpon>Form17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql.cs" />
+    <Compile Include="SqlServer.cs" />
+    <Compile Include="入庫檢核表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入庫檢核表.Designer.cs">
+      <DependentUpon>入庫檢核表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\机台基础信息管理-新增.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\机台基础信息管理-新增.Designer.cs">
+      <DependentUpon>机台基础信息管理-新增.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail\机台基础信息管理-編輯.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail\机台基础信息管理-編輯.Designer.cs">
+      <DependentUpon>机台基础信息管理-編輯.cs</DependentUpon>
+    </Compile>
+    <Compile Include="温控报表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="温控报表.Designer.cs">
+      <DependentUpon>温控报表.cs</DependentUpon>
+    </Compile>
+    <Compile Include="温湿度基础设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="温湿度基础设置.Designer.cs">
+      <DependentUpon>温湿度基础设置.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BoxDemand.resx">
+      <DependentUpon>BoxDemand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckExternalBoxAndLabel.resx">
+      <DependentUpon>CheckExternalBoxAndLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\FactoryInput_SampleEdit.resx">
+      <DependentUpon>FactoryInput_SampleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\Order_Edit.resx">
+      <DependentUpon>Order_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\WorkFlow_Add.resx">
+      <DependentUpon>WorkFlow_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\WorkFlow_Edit.resx">
+      <DependentUpon>WorkFlow_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\温湿度基础设置_Add.resx">
+      <DependentUpon>温湿度基础设置_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\温湿度基础设置_Edit.resx">
+      <DependentUpon>温湿度基础设置_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactoryInput.resx">
+      <DependentUpon>FactoryInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MErrorCheck.resx">
+      <DependentUpon>MErrorCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PNameDefInfo.resx">
+      <DependentUpon>PNameDefInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProduceOrder.resx">
+      <DependentUpon>ProduceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkFlowBaicSetting.resx">
+      <DependentUpon>WorkFlowBaicSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="任务单流程表.resx">
+      <DependentUpon>任务单流程表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="刀模报表.resx">
+      <DependentUpon>刀模报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="发货通知检核表.resx">
+      <DependentUpon>发货通知检核表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="排程报表.resx">
+      <DependentUpon>排程报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="机台基础信习查询.resx">
+      <DependentUpon>机台基础信习查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="机台日报表.resx">
+      <DependentUpon>机台日报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="机台绩效报表.resx">
+      <DependentUpon>机台绩效报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="权限角色管理.resx">
+      <DependentUpon>权限角色管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\车间输入报表-Add.resx">
+      <DependentUpon>车间输入报表-Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\车间输入报表-编辑.resx">
+      <DependentUpon>车间输入报表-编辑.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\权限角色管理-新增.resx">
+      <DependentUpon>权限角色管理-新增.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\权限角色管理-编辑.resx">
+      <DependentUpon>权限角色管理-编辑.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form17.resx">
+      <DependentUpon>Form17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="入庫檢核表.resx">
+      <DependentUpon>入庫檢核表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\机台基础信息管理-新增.resx">
+      <DependentUpon>机台基础信息管理-新增.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail\机台基础信息管理-編輯.resx">
+      <DependentUpon>机台基础信息管理-編輯.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="温控报表.resx">
+      <DependentUpon>温控报表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="温湿度基础设置.resx">
+      <DependentUpon>温湿度基础设置.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="系統icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
